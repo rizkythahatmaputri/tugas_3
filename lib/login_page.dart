@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
             ElevatedButton(
               onPressed: () {
                 if (_NIMController.text == 'H1D021044' &&
-                    _passwordController.text == 'admin') {
+                    _passwordController.text == 'ritha') {
                   //save NIM
                   _saveNIM();
                   //show alert

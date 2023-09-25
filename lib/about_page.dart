@@ -8,7 +8,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('About Page'),
+        title: const Text('About'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -16,7 +16,6 @@ class AboutPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Tambahkan gambar atau ilustrasi di sini
               const SizedBox(height: 20.0),
               Card(
                 color: Colors.white,
@@ -26,7 +25,7 @@ class AboutPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Tentang Saya',
+                        'About Me',
                         style: TextStyle(
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold,
