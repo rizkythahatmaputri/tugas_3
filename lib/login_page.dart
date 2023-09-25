@@ -11,16 +11,16 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _NIMController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   //ignore:prefer_typing_uninitialized_variables
   var namauser;
 
-  void _saveUsername() async {
+  void _saveNIM() async {
     //inisialisasi Share Preferences
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    //simpan username ke local storage
-    prefs.setString('username', _usernameController.text);
+    //simpan NIM ke local storage
+    prefs.setString('NIM', _NIMController.text);
   }
 
   _showInput(namacontroller, placeholder, isPassword) {
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
         filled: true,
         prefixIcon: Icon(isPassword
             ? Icons.lock
-            : Icons.person), // Ubah icon untuk username dan password
+            : Icons.person), // Ubah icon untuk NIM dan password
       ),
     );
   }
@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        title: const Text('Login Disini'),
       ),
       body: Container(
         padding: const EdgeInsets.all(20),
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             // Tambahkan tulisan di atas form
             Text(
-              'Masukkan username dan password Anda',
+              'Masukkan NIM dan password Anda',
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
@@ -87,20 +87,20 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(height: 10),
-            _showInput(_usernameController, 'Username', false),
+            _showInput(_NIMController, 'NIM', false),
             SizedBox(height: 10),
             _showInput(_passwordController, 'Password', true),
             SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                if (_usernameController.text == 'admin' &&
+                if (_NIMController.text == 'H1D021044' &&
                     _passwordController.text == 'admin') {
-                  //save username
-                  _saveUsername();
+                  //save NIM
+                  _saveNIM();
                   //show alert
-                  _showDialog('Anda Berhasil Login', const HomePage());
+                  _showDialog('Login Berhasil', const HomePage());
                 } else {
-                 _showDialog('Username dan Password Salah', const LoginPage());
+                  _showDialog('NIM dan Password Salah', const LoginPage());
                 }
               },
               child: const Text('Login'),

@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('Home'),
         backgroundColor: Theme.of(context).primaryColor,
       ),
       // AppBar
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 10),
             // Tambahkan konten halaman
             Text(
-              'Disini Kamu Bisa Melakukan:',
+              'Disini Kamu Bisa Mengunjungi:',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.black54,
@@ -44,14 +44,14 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 10),
             // Tambahkan daftar fitur
             Text(
-              '* Melihat About',
+              '* About',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.black54,
               ),
             ),
             Text(
-              '* Melihat Rekomendasi Buku',
+              '* Daftar Buku Rekomendasi',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.black54,
@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-       drawer: const Sidemenu(),
+      drawer: const Sidemenu(),
     );
   }
 }
