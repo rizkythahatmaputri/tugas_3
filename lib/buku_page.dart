@@ -126,6 +126,7 @@ class BukuPage extends StatelessWidget {
 ),
         ],
       ),
+      drawer: const Sidemenu(),
     );
   }
 }
